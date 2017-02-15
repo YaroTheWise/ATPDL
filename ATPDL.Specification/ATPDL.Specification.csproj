@@ -41,9 +41,23 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Player.cs" />
+    <Compile Include="IStore\IPlayerInfoRepository.cs" />
+    <Compile Include="IStore\IStore.cs" />
+    <Compile Include="Models\Backhand.cs" />
+    <Compile Include="Models\Hand.cs" />
+    <Compile Include="Models\Weight.cs" />
+    <Compile Include="Models\Player.cs" />
+    <Compile Include="Models\PlayerAbility.cs" />
+    <Compile Include="Models\PlayerFisical.cs" />
+    <Compile Include="Models\PlayerInfo.cs" />
+    <Compile Include="Models\PlayerRanking.cs" />
+    <Compile Include="Models\PlayerSkill.cs" />
+    <Compile Include="Models\Style.cs" />
+    <Compile Include="Models\Talent.cs" />
+    <Compile Include="Models\Height.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

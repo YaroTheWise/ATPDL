@@ -1,12 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace ATPDL.Specification
+namespace ATPDL.Specification.Models
 {
-    public class Player
+    public class PlayerInfo
     {
         public int? PlayerId { get; set; }
         public string FirstName { get; set; }
@@ -16,7 +12,7 @@ namespace ATPDL.Specification
         public DateTime Birthday { get; set; }
         public int StartYear { get; set; }
         public string BirthdayPlace { get; set; }
-        public int SinglesRanking { get; set; }
-        public int DoublesRanking { get; set; }
+        public string Residence { get; set; }
+        public string Nationality { get; set; }
     }
 }
