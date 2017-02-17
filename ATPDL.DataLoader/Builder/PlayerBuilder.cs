@@ -24,7 +24,7 @@ namespace ATPDL.DataLoader.Builder
                     Residence = RegexHelper.GetValueString(text, RegexPlayerInfoTemplates.Residence),
                     Nationality = RegexHelper.GetValueString(text, RegexPlayerInfoTemplates.Nationality),
                 },
-                Fisical = new PlayerFisical
+                PhysicalParameter = new PlayerPhysicalParameter
                 {
                     Backhand = BackhandBuilder.Build(text),
                     Hand = HandBuilder.Build(text),

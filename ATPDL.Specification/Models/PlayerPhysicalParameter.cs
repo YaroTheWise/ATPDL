@@ -1,6 +1,6 @@
 ﻿namespace ATPDL.Specification.Models
 {
-    public class PlayerFisical
+    public class PlayerPhysicalParameter
     {
         public Hand Hand { get; set; }
         public Backhand Backhand { get; set; }

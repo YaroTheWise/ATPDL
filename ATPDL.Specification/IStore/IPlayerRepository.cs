@@ -6,7 +6,7 @@ namespace ATPDL.Specification.IStore
 {
     public interface IPlayerRepository
     {
-        Task Save(Player playerInfo);
-        Task<IQueryable<Player>> Query();
+        Task Save(Player player);
+        IQueryable<Player> Query();
     }
 }

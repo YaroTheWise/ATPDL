@@ -8,7 +8,6 @@ namespace ATPDL.DB
 {
     public class Store : IStore
     {
-
         private readonly StoreContext storeContext;
 
         public Store()

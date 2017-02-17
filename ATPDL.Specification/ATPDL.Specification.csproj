@@ -56,7 +56,7 @@
     <Compile Include="Models\Weight.cs" />
     <Compile Include="Models\Player.cs" />
     <Compile Include="Models\PlayerAbility.cs" />
-    <Compile Include="Models\PlayerFisical.cs" />
+    <Compile Include="Models\PlayerPhysicalParameter.cs" />
     <Compile Include="Models\PlayerInfo.cs" />
     <Compile Include="Models\PlayerRanking.cs" />
     <Compile Include="Models\PlayerSkill.cs" />
