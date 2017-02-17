@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ATPDL.Specification", "ATPD
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ATPDL.DataLoader", "ATPDL.DataLoader\ATPDL.DataLoader.csproj", "{AE4A799D-EEDF-4A08-A7F9-230605BAD15F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ATPDL.Main", "ATPDL.Main\ATPDL.Main.csproj", "{34BE5ED0-E796-448C-B375-98F8B565A42D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{AE4A799D-EEDF-4A08-A7F9-230605BAD15F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AE4A799D-EEDF-4A08-A7F9-230605BAD15F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AE4A799D-EEDF-4A08-A7F9-230605BAD15F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{34BE5ED0-E796-448C-B375-98F8B565A42D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{34BE5ED0-E796-448C-B375-98F8B565A42D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{34BE5ED0-E796-448C-B375-98F8B565A42D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{34BE5ED0-E796-448C-B375-98F8B565A42D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
