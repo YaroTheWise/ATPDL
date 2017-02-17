@@ -1,4 +1,9 @@
-﻿using ATPDL.DataLoader.Interfaces;
+﻿using System;
+using System.Net.Http;
+using System.Text.RegularExpressions;
+using System.Threading;
+using System.Threading.Tasks;
+using ATPDL.DataLoader.Interfaces;
 using Ninject;
 
 namespace ATPDL.Main
@@ -12,20 +17,37 @@ namespace ATPDL.Main
 
             var start = new StartLoadData(loadPlayers);
             start.Start().GetAwaiter().GetResult();
-            //Test.GoMatch();
+        }
+    }
 
-            //   var client = new DataLoader.DataLoader();
-            // client.LoadPlayers().GetAwaiter().GetResult();
+    public class Program1
+    {
+        public static void Main1(string[] args)
+        {
+            for (int i = 0; i < 5; i++)
+            {
+                Test(); //async, passes through immediately
+            }
+            Console.WriteLine("FIRST"); //prints sooner than pages
+            Thread.Sleep(10000); //just to get the output from Test()
+        }
 
-            //var kernel = new StandardKernel();
-            //kernel.Load(Assembly.GetExecutingAssembly());
+        static async void Test()
+        {
+            var r = await DownloadPage("http://stackoverflow.com");
+            Console.WriteLine(r.Substring(0, 50));
+        }
 
-
-            // kernel.Load(Assembly.GetExecutingAssembly());
-
-
-            //var intenal = kernel.Get<IInternalInterface>();
-            //test.Test();
+        static async Task<string> DownloadPage(string url)
+        {
+            using (var client = new HttpClient())
+            {
+                using (var r = await client.GetAsync(new Uri(url)))
+                {
+                    string result = await r.Content.ReadAsStringAsync();
+                    return result;
+                }
+            }
         }
     }
 }
