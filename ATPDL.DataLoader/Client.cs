@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 using ATPDL.DataLoader.Builder;
 using ATPDL.DataLoader.Helper;
 using ATPDL.DataLoader.HttpClient;
+using ATPDL.DataLoader.Interfaces;
 using ATPDL.DataLoader.Templates;
 using ATPDL.Specification;
 using ATPDL.Specification.Models;
@@ -14,7 +15,7 @@ using static System.Int32;
 
 namespace ATPDL.DataLoader
 {
-    public class DataLoader
+    public class DataLoader: IDataLoader
     {
         public async Task LoadPlayers()
         {

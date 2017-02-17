@@ -57,6 +57,7 @@
     <Compile Include="Client.cs" />
     <Compile Include="Helper\RegexHelper.cs" />
     <Compile Include="HttpClient\Client.cs" />
+    <Compile Include="Interfaces\IDataLoader.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Templates\RegexPlayerInfoTemplates.cs" />
   </ItemGroup>
