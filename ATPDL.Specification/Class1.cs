@@ -8,5 +8,6 @@ namespace ATPDL.Specification
 {
     public class Class1
     {
+        public int p { get; set; }
     }
 }
