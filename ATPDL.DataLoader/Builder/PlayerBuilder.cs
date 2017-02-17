@@ -1,4 +1,5 @@
-﻿using ATPDL.DataLoader.Helper;
+﻿using System.Text;
+using ATPDL.DataLoader.Helper;
 using ATPDL.DataLoader.Templates;
 using ATPDL.Specification;
 using ATPDL.Specification.Models;
@@ -31,7 +32,7 @@ namespace ATPDL.DataLoader.Builder
                     Weight = WeightBuilder.Build(text),
                 }
             };
-
+            
             return result;
         }
     }

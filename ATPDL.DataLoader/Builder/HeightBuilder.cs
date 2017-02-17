@@ -8,9 +8,12 @@ namespace ATPDL.DataLoader.Builder
     {
         public static Height Build(string text)
         {
+            var str = RegexHelper.GetValueString(text, RegexPlayerInfoTemplates.HeightFoot);
+            var foot = str.Replace("&#39;", "'").Replace("&quot;", "\"");
+
             return new Height
             {
-                Foot = RegexHelper.GetValueString(text, RegexPlayerInfoTemplates.HeightFoot),
+                Foot = foot,
                 Cm = RegexHelper.GetValueInt(text, RegexPlayerInfoTemplates.HeightCm),
             };
         }
