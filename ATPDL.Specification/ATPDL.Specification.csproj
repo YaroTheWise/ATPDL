@@ -49,7 +49,7 @@
     <Compile Include="Game\Tour.cs" />
     <Compile Include="Game\TypeMatch.cs" />
     <Compile Include="Game\Won.cs" />
-    <Compile Include="IStore\IPlayerInfoRepository.cs" />
+    <Compile Include="IStore\IPlayerRepository.cs" />
     <Compile Include="IStore\IStore.cs" />
     <Compile Include="Models\Backhand.cs" />
     <Compile Include="Models\Hand.cs" />
