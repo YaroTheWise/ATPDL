@@ -1,5 +1,4 @@
-﻿using ATPDL.Service;
-using Ninject;
+﻿using Ninject;
 using Ninject.Extensions.Conventions;
 using Ninject.Modules;
 
@@ -20,7 +19,7 @@ namespace ATPDL.Main
                 x.FromThisAssembly()
                     .SelectAllClasses()
                     .BindAllInterfaces());
-
+            
             return kernel;
         }
     }

@@ -30,7 +30,7 @@ namespace ATPDL.DB.Repository
             }
 
             playerDb.FirstName = player.Info.FirstName;
-            playerDb.LastName = player.Info.FirstName;
+            playerDb.LastName = player.Info.LastName;
             playerDb.NameCode = player.Info.NameCode;
             playerDb.Birthday = player.Info.Birthday;
             playerDb.StartYear = player.Info.StartYear;

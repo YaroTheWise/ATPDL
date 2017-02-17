@@ -1,14 +1,15 @@
 ﻿using System.Text;
 using ATPDL.DataLoader.Helper;
+using ATPDL.DataLoader.Interfaces;
 using ATPDL.DataLoader.Templates;
 using ATPDL.Specification;
 using ATPDL.Specification.Models;
 
 namespace ATPDL.DataLoader.Builder
 {
-    public static class PlayerBuilder
+    public  class PlayerBuilder: IPlayerBuilder
     {
-        public static Player Build(string text)
+        public  Player Build(string text)
         {
             var result = new Player
             {

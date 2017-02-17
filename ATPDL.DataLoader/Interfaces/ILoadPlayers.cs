@@ -2,8 +2,8 @@
 
 namespace ATPDL.DataLoader.Interfaces
 {
-    public interface IDataLoader
+    public interface ILoadPlayers
     {
-        Task LoadPlayers();
+        Task Load();
     }
 }

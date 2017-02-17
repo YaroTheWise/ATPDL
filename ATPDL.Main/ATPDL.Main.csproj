@@ -64,6 +64,7 @@
     <Compile Include="NinjectDependency.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="StartLoadData.cs" />
     <Compile Include="Test.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -74,6 +75,10 @@
     <ProjectReference Include="..\ATPDL.DataLoader\ATPDL.DataLoader.csproj">
       <Project>{ae4a799d-eedf-4a08-a7f9-230605bad15f}</Project>
       <Name>ATPDL.DataLoader</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ATPDL.DB\ATPDL.DB.csproj">
+      <Project>{668db131-27d9-4171-ad38-9aa0ec1aebbb}</Project>
+      <Name>ATPDL.DB</Name>
     </ProjectReference>
     <ProjectReference Include="..\ATPDL.Service\ATPDL.Service.csproj">
       <Project>{313B1789-8A30-4355-8DD1-5A9C31D2FC57}</Project>
