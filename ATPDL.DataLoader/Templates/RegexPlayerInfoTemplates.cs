@@ -2,7 +2,7 @@
 {
     public static class RegexPlayerInfoTemplates
     {
-        public const string Player = @"/en/players/\w*((-|%20)\w*)+/\w*/overview";
+        public const string Player = @"/en/players/\w*((-|%20|'|&#39;|\.)\w*)+/\w*/overview";
         public const string BirthDay = "<span class=\"table-birthday\">\\s*\\((?<id>\\d{4}.\\d{2}.\\d{2})\\)\\s*</span>";
         public const string StartYear = "Turned Pro</div>\\s*<div class=\"table-big-value\">\\s*(?<id>\\d{4})\\s*</div>";
         //public const string BirthdayPlace1 = "Birthplace</div><div class=\"table-value\">(?<id>\\s*)</div>";

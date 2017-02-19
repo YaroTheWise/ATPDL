@@ -13,7 +13,7 @@ namespace ATPDL.DataLoader.Helper
             var regex = new Regex(template);
             var match = regex.Match(text);
 
-            return match.Groups["id"].Value.Trim();
+            return match.Groups["id"].Value.Replace("&#39;", "'").Replace("&quot;", "\"").Trim();
         }
 
         public static int GetValueInt(string text, string template)
@@ -43,7 +43,7 @@ namespace ATPDL.DataLoader.Helper
             var matches = regex.Matches(text);
 
             return matches.Cast<Match>()
-                .Select(match => match.Value.Trim())
+                .Select(match => match.Value.Replace("&#39;", "'").Replace("&quot;", "\"").Trim())
                 .ToList();
         }
     }

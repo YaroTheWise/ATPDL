@@ -55,6 +55,10 @@
     <Compile Include="Migrations\201702171854133_AddPlayerTable.Designer.cs">
       <DependentUpon>201702171854133_AddPlayerTable.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201702191132558_ChangePlayerModel.cs" />
+    <Compile Include="Migrations\201702191132558_ChangePlayerModel.Designer.cs">
+      <DependentUpon>201702191132558_ChangePlayerModel.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Model\Player.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -69,6 +73,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201702171854133_AddPlayerTable.resx">
       <DependentUpon>201702171854133_AddPlayerTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201702191132558_ChangePlayerModel.resx">
+      <DependentUpon>201702191132558_ChangePlayerModel.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

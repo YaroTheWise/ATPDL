@@ -27,13 +27,13 @@ namespace ATPDL.DB.Model
         public string NameCode { get; set; }
         public DateTime Birthday { get; set; }
         public int StartYear { get; set; }
-        [Required]
+       // [Required]
         [StringLength(100)]
         public string BirthdayPlace { get; set; }
-        [Required]
+        //[Required]
         [StringLength(100)]
         public string Residence { get; set; }
-        [Required]
+        //[Required]
         [StringLength(10)]
         public string NationalityCode { get; set; }
         public int Hand { get; set; }
@@ -41,7 +41,7 @@ namespace ATPDL.DB.Model
         public int WeightKg { get; set; }
         public int WeightLbs { get; set; }
         public int HeightCm { get; set; }
-        [Required]
+       // [Required]
         [StringLength(10)]
         public string HeightFoot { get; set; }
     }

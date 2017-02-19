@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Diagnostics;
 using System.Net.Http;
 using System.Threading.Tasks;
@@ -16,7 +17,7 @@ namespace ATPDL.DataLoader
         private readonly IStore store;
 
         public LoadPlayers(IPlayerUrlListGetter playerUrlListGetter,
-            IPlayerBuilder playerBuilder, 
+            IPlayerBuilder playerBuilder,
             IStore store)
         {
             this.playerUrlListGetter = playerUrlListGetter;
@@ -26,30 +27,47 @@ namespace ATPDL.DataLoader
 
 
 
-        public async Task Load()
+        public async Task Load(int from, int to)
         {
-            Stopwatch stopWatch = new Stopwatch();
-            stopWatch.Start();
 
-            var list = new List<Task<Player>>();
-
-            using (var httpClient = new System.Net.Http.HttpClient { BaseAddress = new Uri(UrlResource.Site) })
+            try
             {
-                var playerUrlList = await playerUrlListGetter.Get(httpClient, 1, 20);
-                foreach (var item in playerUrlList)
-                {
-                    list.Add(PayerInfoText(httpClient, item));
-                }
+                Stopwatch stopWatch = new Stopwatch();
+                stopWatch.Start();
 
-                foreach (var item in list)
-                {
-                    await store.PlayerRepository.Save(await item);
-                }
+                var list = new List<Task<Player>>();
 
-                stopWatch.Stop();
-                Console.WriteLine("RunTime " + stopWatch.ElapsedMilliseconds);
-                Console.WriteLine();
-                await store.SubmitChangesAsync();
+                using (var httpClient = new System.Net.Http.HttpClient { BaseAddress = new Uri(UrlResource.Site) })
+                {
+                    var playerUrlList = await playerUrlListGetter.Get(httpClient, from, to);
+
+                    if (to - from + 1 != playerUrlList.Count)
+                    {
+                        throw new Exception();
+                    }
+
+
+                    foreach (var item in playerUrlList)
+                    {
+                        list.Add(PayerInfoText(httpClient, item));
+                    }
+
+                    foreach (var item in list)
+                    {
+                        await store.PlayerRepository.Save(await item);
+                    }
+
+                    stopWatch.Stop();
+                    Console.WriteLine("RunTime " + stopWatch.ElapsedMilliseconds);
+                    Console.WriteLine();
+
+                    await store.SubmitChangesAsync();
+                }
+            }
+            catch (Exception e)
+            {
+
+                throw;
             }
         }
 
@@ -66,7 +84,7 @@ namespace ATPDL.DataLoader
         //{
         //    Stopwatch stopWatch = new Stopwatch();
         //    stopWatch.Start();
-            
+
         //    using (var httpClient = new System.Net.Http.HttpClient { BaseAddress = new Uri(UrlResource.Site) })
         //    {
         //        var playerUrlList = await playerUrlListGetter.Get(httpClient, 1, 20);
